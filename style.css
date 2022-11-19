@@ -1,0 +1,343 @@
+.body1{
+    background-color: rgb(240, 240, 80);
+}
+
+.body2{
+    background-color: rgb(240, 240, 80);
+}
+
+h1{
+    text-align: center;
+}
+
+.block{
+    margin-left: 30%;
+}
+
+.parent1{
+    display: flex;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.child1{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(108, 108, 168);
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-name: myanimation1;
+    animation-direction: alternate;
+    animation-duration: 2s;
+}
+
+@keyframes myanimation1{
+    0%{transform: skewX(20deg);}
+    100%{transform: skewX(-20deg);}
+}
+
+
+.parent2{
+    display: flex;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.child2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(230, 167, 230);
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-name: myanimation2;
+    animation-direction: alternate;
+    animation-duration: 1s;
+}
+
+@keyframes myanimation2{
+    0%{transform: skewY(20deg);}
+    100%{transform: skewY(-20deg);}
+}
+
+.parent3{
+    display: flex;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.child3{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(108, 108, 168);
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-name: myanimation3;
+    animation-direction: normal;
+    animation-duration: 3s;
+}
+
+@keyframes myanimation3{
+    100%{transform: rotateZ(360deg);}
+}
+
+.parent4{
+    display: flex;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.child4{
+    width: 100px;
+    height: 100px;
+}
+
+.box1{
+    background-color: rgb(108, 108, 168);
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-name: box1;
+    animation-direction: alternate;
+    animation-duration: 2s;
+}
+
+@keyframes box1{
+    0%{transform: rotateX(0deg);}
+    100%{transform: rotateX(50deg);}
+}
+
+.box2{
+    background-color: brown;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-name: box2;
+    animation-direction: alternate;
+    animation-duration: 2s;
+}
+
+@keyframes box2{
+    0%{transform: rotateY(0deg);}
+    100%{transform: rotateY(70deg);}
+}
+
+.box3{
+    background-color: rgb(34, 170, 34);
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-name: box3;
+    animation-direction: alternate;
+    animation-duration: 3s;
+}
+
+@keyframes box3{
+    0%{transform: rotateZ(0deg);}
+    100%{transform: rotateZ(90deg);}
+}
+
+
+/* index1.html */
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+    background-color: rgb(54, 209, 54);
+    width: 80px;
+    height: 80px;
+    margin: 15px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s;
+    transform-origin: left;
+}
+
+.item1:hover{
+    transform: scaleX(2.5);
+}
+
+.item2{
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    transition-duration: 3s;
+}
+
+.item2:hover{
+    width: 200px;
+    height: 200px;
+}
+
+.item3:hover{
+    transform: scaleX(2.5);
+}
+
+.item4:hover{
+    transform: scaleX(2.5);
+}
+
+.item5:hover{
+    transform: scaleX(2.5);
+}
+
+.item6:hover{
+    transform: scaleX(2.5);
+}
+
+.item7:hover{
+    transform: scaleX(2.5);
+}
+
+a{
+    font-size: 1.5em;
+}
+
+.last1{
+    margin-left: 38%;
+}
+
+.last2{
+    margin-left: 48%;
+}
+
+
+/* Index2.html */
+
+.body3{
+    margin: 0;
+    border-left: 8px solid orange;
+    border-right: 8px solid green;
+    
+}
+
+.sky{
+    background-image: url(./sky.jpg);
+    height: 65vh;
+}
+
+
+.road{
+    background-image: url(./road.jpg);
+    background-size: cover;
+    width: 500%;
+    height: 35vh;
+    z-index: -2;
+    animation-name: road-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    background-repeat: repeat-x;
+    position: relative;
+}
+
+@keyframes road-animation {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+.city{
+    position: absolute;
+    z-index: 0;
+    top: 31vh;
+    width: 350px;
+    background-size: cover;
+    animation-name: city-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    background-repeat: repeat-x;
+    animation-play-state: running;
+}
+
+@keyframes city-animation{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-30%);
+    }
+}
+
+.sunimg{
+    width: 100px;
+    position: absolute;
+    z-index: 1;
+    top: 13%;
+    right: 13%;
+    animation-name: sun-animation;
+    animation-timing-function: linear;
+    animation-duration: 90s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes sun-animation{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-800px);
+    }
+}
+
+.carimg{
+    width: 400px;
+    position: absolute;
+    top: 60%;
+    left: 33%;
+    z-index: 1;
+}
+
+.wheel1{
+    width: 66px;
+    position: absolute;
+    z-index: 1;
+    top: 74%;
+    left: 483px;
+    animation-name: wheel-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+.wheel2{
+    width: 66px;
+    position: absolute;
+    z-index: 1;
+    top: 74%;
+    left: 728px;
+    animation-name: wheel-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes wheel-animation {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.flag{
+    width: 104px;
+    position: absolute;
+    top: 56%;
+    left: 714px;
+    z-index: 1;
+}
+
+
+.span1{
+    background-color: orange;
+}
+
+.span2{
+    background-color: white;
+}
+
+.span3{
+    background-color: green;
+}
+
